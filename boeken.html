@@ -2,7 +2,7 @@
 <html>
     <body>
         <h2>Welk thema wil u boeken?</h2>
-        <form name="myForm" onsubmit="return themaInput()" method="post"></form>
+        <form name="myForm" onsubmit="return themaInput()" method="post">
              <input type="radio" id="thema1" name="thema" value="thema1">
              <label for="thema1">thema 1</label><br>
              <input type="radio" id="thema2" name="thema" value="thema2">
@@ -11,30 +11,31 @@
              <label for="thema3">thema 3</label><br>
              <input type="radio" id="thema4" name="thema" value="thema4">
              <label for="thema4">thema 4</label><br>
-             <button type="submit">Volgende</button>
+             <input type="submit" value="Volgende">
         </form>
         <script type="text/javascript">
             function themaInput() {
             let thema = document.forms["myForm"]["thema"].value;
             if(thema == "thema1") {
                 let prijsPerkind = 5;
-              document.getElementById("h1").innerHTML = "<h1>Prijs per kind: </h1>";
+                document.write('<h2 id = "heading"></h2>');
+                document.getElementById("heading").innerHTML = "prijs per kind: $" + prijsPerkind + "!";
+                
                  }
             else if(thema == "thema2") {
                 let prijsPerkind = 10;
-              document.getElementById("h1").innerHTML = "<h1>Prijs per kind: </h1>";
-                 }
+                document.write('<h2 id = "heading"></h2>');
+                document.getElementById("heading").innerHTML = "prijs per kind: $" + prijsPerkind + "!";               }
             else if(thema == "thema3") {
                 let prijsPerkind = 15;
-              document.getElementById("h1").innerHTML = "<h1>Prijs per kind: </h1>";
-                 }
+                document.write('<h2 id = "heading"></h2>');
+                document.getElementById("heading").innerHTML = "prijs per kind: $" + prijsPerkind + "!";                }
             else if(thema == "thema4") {
                 let prijsPerkind = 20;
-              document.getElementById("h1").innerHTML = "<h1>Prijs per kind: </h1>";
-                 }
+                document.write('<h2 id = "heading"></h2>');
+                document.getElementById("heading").innerHTML = "prijs per kind: $" + prijsPerkind + "!";                }
             else{
-                document.getElementById("h1").innerHTML = "<h1>Vul aub iets in</h1>";
-            }
+                document.write('<h2>HTML</h2>');            }
             }
            </script>
 
